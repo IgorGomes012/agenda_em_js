@@ -37,6 +37,7 @@ let dias_trabalhados = [
     { dia: 29, marcado: true, nome: "peixonauta" },
     { dia: 30, marcado: true, nome: "leticia" },
     { dia: 31, marcado: false, nome: "" }
+
 ]
 
 
@@ -54,172 +55,30 @@ while (contador < dias_trabalhados.length) {
 
     let dias_disponiveis = dias_do_mes + 1
     console.log('dias diponiveis: ' + dias_disponiveis);
-}
-
-
-const marcar_horario = entradaDados.question('digite um dia disponivel: ')
-
-//const marcar_horario = 1
-
-//caso tenha o dia disponivel marque na agenda
-switch (marcar_horario) {
-
-    case 1:
-
-        dias_trabalhados[0].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-            ;
-
-    case 2:
-        dias_trabalhados[2].nome = entradaDados_nome.question('digite seu nome') ;
-        console.log(dias_trabalhados);
-        break;
-
-    case 3:
-        dias_trabalhados[3].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 4:
-        dias_trabalhados[4].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados.nome);
-        break;
-
-    case 5:
-        dias_trabalhados[5].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 6:
-        dias_trabalhados[6].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 7:
-        dias_trabalhados[7].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 8:
-        dias_trabalhados[8].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 9:
-        dias_trabalhados[9].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 10:
-        dias_trabalhados[10].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-
-    case 11:
-        dias_trabalhados[11].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 12:
-        dias_trabalhados[12].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 13:
-        dias_trabalhados[13].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 14:
-        dias_trabalhados[14].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 15:
-        dias_trabalhados[15].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 16:
-        dias_trabalhados[16].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 17:
-        dias_trabalhados[17].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 19:
-        dias_trabalhados[18].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-
-    case 20:
-        dias_trabalhados[19].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 21:
-        dias_trabalhados[20].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 22:
-        dias_trabalhados[21].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 23:
-        dias_trabalhados[22].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-
-    case 24:
-        dias_trabalhados[23].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 25:
-        dias_trabalhados[24].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 26:
-        dias_trabalhados[25].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 27:
-        dias_trabalhados[26].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 28:
-        dias_trabalhados[27].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 29:
-        dias_trabalhados[28].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 30:
-        dias_trabalhados[29].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
-    case 31:
-        dias_trabalhados[30].nome = entradaDados_nome.question('digite seu nome');
-        console.log(dias_trabalhados);
-        break;
-
 
 }
+
+   //esta adicionando um nome a tabela
+
+
+
+let marcar_horario = entradaDados.question('digite um dia disponivel: ')
+
+if (dias_trabalhados[marcar_horario - 1].marcado === true) {
+    console.log('erro')
+    process.exit(1)
+    //throw new Error('erro')
+}
+
+dias_trabalhados[--marcar_horario].nome = entradaDados_nome.question('digite um nome: ')
+
+console.log(dias_trabalhados)
+
+
+
+
+
+
 
 
 
